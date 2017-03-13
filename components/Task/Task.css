@@ -1,0 +1,58 @@
+.task {
+	position: relative;
+	padding: 10px;
+	margin: 2px;
+	border: 3px solid #949191;
+	// text-align: center;
+}
+
+.title {
+	border-bottom: 1px solid black;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.name {
+	text-align: right;
+}
+
+.type {
+	display: inline-block;
+	padding: 5px 8px;
+	border-radius: 5px;
+	background: red;
+}
+
+.arrow {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	color: #ffffff;
+}
+
+.arrow-left,
+.arrow-right {
+	width: 50%;
+	height: 100%;
+	line-height: 50px;
+	background: #78e5ea;
+}
+
+.arrow-right {
+
+}
+
+.arrow-left:hover {
+	color: #949191;
+}
+
+.comments {
+	color: #78e5ea;
+}
+
+.comments:hover {
+	color: #78e5ea;
+	text-decoration: underline;
+}

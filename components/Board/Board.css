@@ -1,0 +1,19 @@
+.board {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.col {
+	border: 1px solid #949191;
+	flex-grow: 1;
+}
+
+.col-header {
+	height: 70px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 70px;
+	color: #949191;
+	border-bottom: 1px solid #949191;
+}
