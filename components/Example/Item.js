@@ -7,6 +7,8 @@ const style = {
 	width: '100px',
 	height: '100px',
 	background: 'yellow',
+  display: "inline-block",
+  marginRight: "10px", 
 }
 
 // Drag sources and drop targets only interact
@@ -17,6 +19,7 @@ const Types = {
   CARD: 'card'
 };
 
+let allow = true; 
 /**
  * Specifies the drag source contract.
  * Only `beginDrag` function is required.
@@ -36,19 +39,20 @@ const cardSource = {
   // },
 
   beginDrag(props, monitor, component) {
-  	console.log('begin');
+  	// console.log('begin');
     // Return the data describing the dragged item
-    const item = { id: 23, name: 'Sveta' };
+    const item = props.item;
     return item;
   },
 
   endDrag(props, monitor, component) {
-  	console.log('end');
+  	// console.log('end');
+    console.log('didDrop',monitor.didDrop());
     if (!monitor.didDrop()) {
-      // You can check whether the drop was successful
-      // or if the drag ended but nobody handled the drop
+      allow = true;
       return;
     }
+    allow = false;
 
     // When dropped on a compatible target, do something.
     // // Read the original dragged item from getItem():
@@ -74,13 +78,12 @@ function collect(connect, monitor) {
     connectDragSource: connect.dragSource(),
     // You can ask the monitor about the current drag state:
     isDragging: monitor.isDragging(),
-    item: { id: 23, name: 'Sveta' },
   };
 }
 
 class Item extends React.Component {
   render() {
-    // Your component receives its own props as usual
+    // console.log('allow', allow)
     const { id, name } = this.props.item;
 
     // These props are injected by React DnD,
@@ -88,9 +91,10 @@ class Item extends React.Component {
     const { isDragging, connectDragSource } = this.props;
 
     return connectDragSource(
-      <div style={style}>
-        I am a draggable card number {id}
-        {isDragging && ' (and I am being dragged now)'}
+      <div style={{ display: 'inline-block' }}>
+        {!isDragging && allow && <div style={style} key={id}>
+          I am a draggable card number {id}
+        </div>}
       </div>
     );
   }

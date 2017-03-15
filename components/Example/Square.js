@@ -7,6 +7,15 @@ const style = {
   height: '600px',
   width: '100%',
   background: 'pink',
+  marginTop: '20px',
+}
+
+const style1 = {
+  width: '100px',
+  height: '100px',
+  background: 'yellow',
+  display: 'inline-block',
+  marginRight: '10px',
 }
 
 // Drag sources and drop targets only interact
@@ -17,6 +26,10 @@ const Types = {
   CHESSPIECE: 'card'
 };
 
+let idList = [];
+function addID(id) {
+  idList.push(id);
+}
 /**
  * Specifies the drop target contract.
  * All methods are optional.
@@ -31,7 +44,7 @@ const chessSquareTarget = {
 
   drop(props, monitor, component) {
     const item = monitor.getItem();
-    console.log('drop', item.id);
+    addID(item.id);
     // console.log('**', this)
   }
 };
@@ -40,7 +53,6 @@ const chessSquareTarget = {
  * Specifies which props to inject into your component.
  */
 function collect(connect, monitor) {
-  console.log('monitor', monitor.canDrop())
   return {
     // Call this function inside render()
     // to let React DnD handle the drag events:
@@ -69,12 +81,6 @@ class Square extends React.Component {
     //   // shallowly, not including nested targets
     // }
   // }
-  constructor() {
-    super();
-    this.state = {
-      id: null,
-    }
-  }
 
   render() {
     // Your component receives its own props as usual
@@ -87,10 +93,14 @@ class Square extends React.Component {
 
     return connectDropTarget(
       <div className='Cell' style={style}>
-        
+        {
+          idList.map(id => <div style={style1} key={id}>
+        I am a draggable card number {id}
+      </div>)
+        }
       </div>
     );
   }
 }
 
-export default DropTarget(Types.CHESSPIECE, chessSquareTarget, collect)(Square);
+export default DropTarget(Types.CHESSPIECE, chessSquareTarget, collect)(Square);  

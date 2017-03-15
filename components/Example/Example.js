@@ -14,10 +14,13 @@ const style = {
 class Card extends React.Component {
 	render() {
 		const { text } = this.props;
+		const items = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 		return (
 			<div style={style}>
-				<Item />
-				<Square />
+				{
+					items.map(item => <Item item={item} key={item.id} />)
+				}
+				<Square list='list'/>
 			</div>
 		);
 	}

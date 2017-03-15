@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { Draggable, Droppable } from 'react-drag-and-drop';
 
 import './Board.css';
 
@@ -27,7 +26,7 @@ export default class Board extends React.Component {
 				<div className="col">
 					<div className="col-header">In Progress</div>
 				</div>
-				<div className="col">
+{/*				<div className="col">
 					<div className="col-header">Review</div>
 					{
 						this.state.tasksCol4.map((task, index) => 
@@ -54,7 +53,7 @@ export default class Board extends React.Component {
 							types={['task']} // <= allowed drop types 
 							onDrop={this.onDropToCol5}>
 					</Droppable>
-				</div>
+				</div>*/}
 			</div>
 		);
 	}
