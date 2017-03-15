@@ -12,10 +12,10 @@ export default class Task extends React.Component {
 				<p className="type">{this.props.task.type}</p>
 				<div className="deadline">Deadline: {this.props.task.deadline}</div>
 				<Link to="/" className="comments">Show comments</Link>
-				<span className="arrow">
+				{/*<span className="arrow">
 					<i className=" fa fa-chevron-left arrow-left"></i>
 					<i className=" fa fa-chevron-right arrow-right"></i>
-				</span>
+				</span>*/}
 			</div>
 		);
 	}

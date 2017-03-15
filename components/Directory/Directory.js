@@ -3,8 +3,6 @@ import { ListGroup, ListGroupItem, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router';
 import './Directory.css';
 
-import Q from './Q';
-
 export default class Directory extends React.Component {
 	render() {
 		var arr = ['1 group', '2 group', '3 group', 
@@ -13,7 +11,7 @@ export default class Directory extends React.Component {
 					'Barsukova Irina', 'Lukashenka Andrey', 'Senkov Artem'];	
 		return (
 			<div className="wrapper">
-				{/*<h2>List of groups:</h2>
+				<h2>List of groups:</h2>
 				<Nav>
 				{
 					arr.map((item, index) => (
@@ -22,8 +20,7 @@ export default class Directory extends React.Component {
 						</NavItem>
 					))
 				}
-				</Nav>*/}
-				<Q />
+				</Nav>
 			</div>
 		);
 	}
