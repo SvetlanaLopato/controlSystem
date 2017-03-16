@@ -93,10 +93,11 @@ class Square extends React.Component {
 
     return connectDropTarget(
       <div className='Cell' style={style}>
+      {this.props.children}
         {
           idList.map(id => <div style={style1} key={id}>
-        I am a draggable card number {id}
-      </div>)
+            I am a draggable card number {id}
+          </div>)
         }
       </div>
     );

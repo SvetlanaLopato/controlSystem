@@ -1,11 +1,12 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import './Board.css';
 
 import Task from '../Task/Task';
+import DropTargetCol from './DropTargetCol';
 
-export default class Board extends React.Component {
+class Board extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -25,48 +26,34 @@ export default class Board extends React.Component {
 				</div>
 				<div className="col">
 					<div className="col-header">In Progress</div>
+					<DropTargetCol />
 				</div>
-{/*				<div className="col">
+				<div className="col">
 					<div className="col-header">Review</div>
-					{
-						this.state.tasksCol4.map((task, index) => 
-							<Draggable type="task"
-									data={task}
-									key={task.id}>
-									<Task task={task} />
-							</Draggable>
-						)
-					}
+					<DropTargetCol>
+						{
+							this.state.tasksCol4.map((task, index) => 
+								<Task task={task} key={index} />
+							)
+						}
+					</DropTargetCol>
 				</div>
 				<div className="col">
 					<div className="col-header">Done</div>
-					{
-						this.state.tasksCol5.map((task, index) => 
-							<Draggable type="task"
-									data={task}
-									key={task.id}>
-									<Task task={task} />
-							</Draggable>
-						)
-					}
-					<Droppable style={{width: '100%', height: '100px', border: '1px solid red'}}
-							types={['task']} // <= allowed drop types 
-							onDrop={this.onDropToCol5}>
-					</Droppable>
-				</div>*/}
+					<DropTargetCol tasks={this.state.tasksCol5}>
+						{
+							this.state.tasksCol5.map((task, index) => 
+								<Task task={task} key={index} />
+							)
+						}
+					</DropTargetCol>
+				</div>
 			</div>
 		);
 	}
-
-	onDropToCol5 = (data) => {
-		console.log("data", data);
-		this.setState(state => {
-			state.tasksCol5 = [...state.tasksCol5, data.task];
-			return state;
-		});
-	}
-
 }
+
+export default DragDropContext(HTML5Backend)(Board);
 
 let taskCol5 = [{
 			id: 1,
@@ -80,7 +67,7 @@ let taskCol5 = [{
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 4',
-		}, {
+		}, /*{
 			id: 3,
 			title: 'Math',
 			name: 'Andrey Lukashenko',
@@ -92,7 +79,7 @@ let taskCol5 = [{
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 1',
-		}];
+		}*/];
 let taskCol4 = [{
 			id: 5,
 			title: 'Computer nerwork',
@@ -105,7 +92,7 @@ let taskCol4 = [{
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 4',
-		}, {
+		}, /*{
 			id: 6,
 			title: 'Math',
 			name: 'Andrey Lukashenko',
@@ -117,4 +104,4 @@ let taskCol4 = [{
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 1',
-		}];
+		}*/];

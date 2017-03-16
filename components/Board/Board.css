@@ -17,3 +17,7 @@
 	color: #949191;
 	border-bottom: 1px solid #949191;
 }
+
+.drop-target-col {
+	height: 100%;
+}
