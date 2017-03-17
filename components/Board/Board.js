@@ -30,22 +30,12 @@ class Board extends React.Component {
 				</div>
 				<div className="col">
 					<div className="col-header">Review</div>
-					<DropTargetCol>
-						{
-							this.state.tasksCol4.map((task, index) => 
-								<Task task={task} key={index} />
-							)
-						}
+					<DropTargetCol tasks={this.state.tasksCol5}>
 					</DropTargetCol>
 				</div>
 				<div className="col">
 					<div className="col-header">Done</div>
 					<DropTargetCol tasks={this.state.tasksCol5}>
-						{
-							this.state.tasksCol5.map((task, index) => 
-								<Task task={task} key={index} />
-							)
-						}
 					</DropTargetCol>
 				</div>
 			</div>
