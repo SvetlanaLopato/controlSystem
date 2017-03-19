@@ -16,15 +16,24 @@ const colSource = {
 	},
 
 	drop(props, monitor, component) {
-		const task = monitor.getItem();
-		return task;
+		const dropedTask = monitor.getItem();
+
+		return {
+			dropedTask: dropedTask,
+			isDroped: true,
+			newTaskState: component.props.colState,
+		};
 	}
 };
 
 function collect(connect, monitor) {
 	return {
 		connectDropTarget: connect.dropTarget(),
-		dropedTask: monitor.getDropResult(),
+		dropedTask: monitor.getDropResult() && monitor.getDropResult().dropedTask,
+		isDroped: monitor.getDropResult() && monitor.getDropResult().isDroped,
+		isOver: monitor.isOver(),
+	    isOverCurrent: monitor.isOver({ shallow: true }),
+	    newTaskState: monitor.getDropResult() && monitor.getDropResult().newTaskState,
 	}
 }
 
@@ -33,20 +42,68 @@ class DropTargetCol extends React.Component {
 		super(props);
 		this.state = {
 			tasks: props.tasks || [],
+			// colState: props.colState,
+			// dropedTask: {},
 		}
 	}
 
-	shouldComponentUpdate() {
-		console.log('droped', this.props.dropedTask)
-		if (this.props.dropedTask) {
-			this.removeTask(this.props.dropedTask);
+	componentWillReceiveProps(nextProps) {
+		// console.log(this.props, nextProps);
+		if (nextProps.isDroped && nextProps.dropedTask.state !== nextProps.newTaskState) {
+			if (nextProps.dropedTask.state === nextProps.colState) {
+				this.removeTask(nextProps.dropedTask);
+			}
+
+			if (nextProps.newTaskState === nextProps.colState) {
+				const copyDropedTask = Object.assign({}, nextProps.dropedTask);
+
+				this.addTask(copyDropedTask);
+			}
 		}
+
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		if (!this.props.isDroped) {
+			return false;
+		}
+		// if (this.props.dropedTask && this.props.dropedTask.state === this.props.newTaskState) {
+		// 	return false;
+		// }
+
 		return true;
+	}
+
+	/*shouldComponentUpdate() {
+		// this.setState({ dropedTask: this.props.dropedTask });
+		console.log(this.props.newTaskState)
+		if (this.props.isDroped && this.state.colState === this.props.newTaskState) {
+			// this.setState({ dropedTask: {} });
+			// console.log('*', this.state.colState, this.props.newTaskState)
+			return false;
+		}
+		// if (!this.props.isDroped) {
+		// 	return false;
+		// }
+		// console.log('--')
+		return true;
+	}*/
+
+	componentWillUpdate(nextProps, nextState) {
+		console.log('state', nextState)
+		// console.log('*');
+		// console.log('*', nextProps.dropedTask)
+		// if (nextProps.isDroped && nextProps.dropedTask && nextProps.dropedTask.id) {
+		// 	const dropedTaskIndex = nextState.tasks.findIndex(task => task.id === nextProps.dropedTask.id);
+		// 	if (dropedTaskIndex != -1) {
+		// 		this.removeTask(nextProps.dropedTask);
+		// 	}
+		// }
 	}
 
 	render() {
 		const { connectDropTarget } = this.props;
-
+	
 		return connectDropTarget(
 			<div className="drop-target-col">
 				{
@@ -58,15 +115,28 @@ class DropTargetCol extends React.Component {
 		);
 	}
 
+	componentDidUpdate() {
+		console.log('updated')
+	}
+
 	removeTask = (dropedTask) => {
+		console.log('remove');
 		const dropedTaskIndex = this.state.tasks.findIndex(task => task.id === dropedTask.id);
-		if (dropedTaskIndex >= 0) {
-			this.setState(state => {
-				state.tasks.splice(dropedTaskIndex, 1);
-				return state;
-			})
-		}
-		console.log(this.state);
+
+		this.setState(state => {
+			state.tasks.splice(dropedTaskIndex, 1);
+			return state;
+		});
+	}
+
+	addTask = (newTask) => {
+		console.log('add');
+		newTask.state = this.props.colState;
+
+		this.setState(state => {
+			state.tasks.push(newTask);
+			return state;
+		});
 	}
 }
 

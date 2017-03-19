@@ -17,6 +17,7 @@ const taskSource = {
 
 	endDrag(props, monitor, component) {
 		console.log('end drag');
+		// monitor.getDropResult();
 	},
 }
 

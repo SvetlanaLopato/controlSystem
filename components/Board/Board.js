@@ -26,16 +26,16 @@ class Board extends React.Component {
 				</div>
 				<div className="col">
 					<div className="col-header">In Progress</div>
-					<DropTargetCol />
+					<DropTargetCol colState="in progress"/>
 				</div>
 				<div className="col">
 					<div className="col-header">Review</div>
-					<DropTargetCol tasks={this.state.tasksCol5}>
+					<DropTargetCol colState="review" tasks={this.state.tasksCol4}>
 					</DropTargetCol>
 				</div>
 				<div className="col">
 					<div className="col-header">Done</div>
-					<DropTargetCol tasks={this.state.tasksCol5}>
+					<DropTargetCol colState="done" tasks={this.state.tasksCol5}>
 					</DropTargetCol>
 				</div>
 			</div>
@@ -50,13 +50,15 @@ let taskCol5 = [{
 			title: 'Computer nerwork',
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
-			type: 'Test',
+			type: 'Kolokvium',
+			state: 'done',
 		}, {
 			id: 2,
 			title: 'Science',
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
-			type: 'Lab 4',
+			type: 'Exercise',
+			state: 'done',
 		}, /*{
 			id: 3,
 			title: 'Math',
@@ -76,12 +78,14 @@ let taskCol4 = [{
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Test',
+			state: 'review',
 		}, {
 			id: 8,
 			title: 'Science',
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 4',
+			state: 'review',
 		}, /*{
 			id: 6,
 			title: 'Math',
