@@ -20,13 +20,15 @@ class Board extends React.Component {
 			<div className="board">
 				<div className="col">
 					<div className="col-header">Blocked</div>
+					<DropTargetCol colState="blocked" />
 				</div>
 				<div className="col">
 					<div className="col-header">To Do</div>
+					<DropTargetCol colState="to do" />
 				</div>
 				<div className="col">
 					<div className="col-header">In Progress</div>
-					<DropTargetCol colState="in progress"/>
+					<DropTargetCol colState="in progress" />
 				</div>
 				<div className="col">
 					<div className="col-header">Review</div>
@@ -74,14 +76,14 @@ let taskCol5 = [{
 		}*/];
 let taskCol4 = [{
 			id: 5,
-			title: 'Computer nerwork',
+			title: 'Maths',
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Test',
 			state: 'review',
 		}, {
 			id: 8,
-			title: 'Science',
+			title: 'Phisics',
 			name: 'Andrey Lukashenko',
 			deadline: '18.03.2017',
 			type: 'Lab 4',

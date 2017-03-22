@@ -1,14 +1,17 @@
 .task {
-	position: relative;
 	padding: 10px;
-	margin: 2px;
-	border: 3px solid #949191;
-	background: #c3f1f3;
-	// text-align: center;
+	margin: 20px 20px 30px;
+	box-shadow: 0 0 25px 1px #acaeae;
+	background: #ffffff;
+	font-style: italic
+}
+
+.task:hover {
+	box-shadow: 0 0 25px 1px #78e5ea;
 }
 
 .title {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #bec3c3;
 	text-align: center;
 	padding-bottom: 10px;
 }
@@ -21,39 +24,18 @@
 	display: inline-block;
 	padding: 5px 8px;
 	border-radius: 5px;
-	background: red;
-}
-
-.arrow {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	width: 50px;
-	height: 50px;
-	color: #ffffff;
-}
-
-.arrow-left,
-.arrow-right {
-	width: 50%;
-	height: 100%;
-	line-height: 50px;
 	background: #78e5ea;
 }
 
-.arrow-right {
-
-}
-
-.arrow-left:hover {
-	color: #949191;
-}
-
 .comments {
-	color: #78e5ea;
+	margin-left: 10px;
 }
 
 .comments:hover {
-	color: #78e5ea;
 	text-decoration: underline;
+}
+
+.fa-comment {
+	font-size: 16px;
+	color: #bec3c3;
 }

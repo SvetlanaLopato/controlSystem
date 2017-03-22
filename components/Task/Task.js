@@ -37,6 +37,7 @@ class Task extends React.Component {
 				<h5 className="name">{this.props.task.name}</h5>
 				<p className="type">{this.props.task.type}</p>
 				<div className="deadline">Deadline: {this.props.task.deadline}</div>
+				<i className="fa fa-comment"></i>
 				<Link to="/" className="comments">Show comments</Link>
 				{/*<span className="arrow">
 					<i className=" fa fa-chevron-left arrow-left"></i>

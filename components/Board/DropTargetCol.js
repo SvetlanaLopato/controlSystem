@@ -42,13 +42,10 @@ class DropTargetCol extends React.Component {
 		super(props);
 		this.state = {
 			tasks: props.tasks || [],
-			// colState: props.colState,
-			// dropedTask: {},
 		}
 	}
 
 	componentWillReceiveProps(nextProps) {
-		// console.log(this.props, nextProps);
 		if (nextProps.isDroped && nextProps.dropedTask.state !== nextProps.newTaskState) {
 			if (nextProps.dropedTask.state === nextProps.colState) {
 				this.removeTask(nextProps.dropedTask);
@@ -67,38 +64,8 @@ class DropTargetCol extends React.Component {
 		if (!this.props.isDroped) {
 			return false;
 		}
-		// if (this.props.dropedTask && this.props.dropedTask.state === this.props.newTaskState) {
-		// 	return false;
-		// }
 
 		return true;
-	}
-
-	/*shouldComponentUpdate() {
-		// this.setState({ dropedTask: this.props.dropedTask });
-		console.log(this.props.newTaskState)
-		if (this.props.isDroped && this.state.colState === this.props.newTaskState) {
-			// this.setState({ dropedTask: {} });
-			// console.log('*', this.state.colState, this.props.newTaskState)
-			return false;
-		}
-		// if (!this.props.isDroped) {
-		// 	return false;
-		// }
-		// console.log('--')
-		return true;
-	}*/
-
-	componentWillUpdate(nextProps, nextState) {
-		console.log('state', nextState)
-		// console.log('*');
-		// console.log('*', nextProps.dropedTask)
-		// if (nextProps.isDroped && nextProps.dropedTask && nextProps.dropedTask.id) {
-		// 	const dropedTaskIndex = nextState.tasks.findIndex(task => task.id === nextProps.dropedTask.id);
-		// 	if (dropedTaskIndex != -1) {
-		// 		this.removeTask(nextProps.dropedTask);
-		// 	}
-		// }
 	}
 
 	render() {
@@ -113,10 +80,6 @@ class DropTargetCol extends React.Component {
 				}
 			</div>
 		);
-	}
-
-	componentDidUpdate() {
-		console.log('updated')
 	}
 
 	removeTask = (dropedTask) => {

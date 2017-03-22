@@ -1,12 +1,11 @@
 .board {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
 }
 
 .col {
+	flex-basis: 20%;
 	border: 1px solid #949191;
-	flex-grow: 1;
 }
 
 .col-header {
@@ -20,5 +19,5 @@
 
 .drop-target-col {
 	height: 100%;
-	background: yellow;
+	padding-bottom: 50%;
 }
