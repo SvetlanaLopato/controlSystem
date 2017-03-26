@@ -5,16 +5,13 @@
 
 .left-side {
 	flex: 2;
-	background: url(entry.jpg) 50% 100% no-repeat;
+	background: url('/images/entry.jpg') 50% 100% no-repeat;
 	background-size: cover;
 }
 
 .right-side {
 	flex: 1;
 	display: flex;
-	right: 0;
-	top: 0;
-	height: 100%;
 	align-items: center;
 	justify-content: center;
 	background: #fff;

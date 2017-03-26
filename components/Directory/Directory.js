@@ -1,7 +1,7 @@
+import './Directory.css';
 import React from 'react';
 import { ListGroup, ListGroupItem, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router';
-import './Directory.css';
 
 export default class Directory extends React.Component {
 	render() {
@@ -21,6 +21,12 @@ export default class Directory extends React.Component {
 					))
 				}
 				</Nav>
+				<div className="back-button button">
+					<Link to="/">
+						<i className="fa fa-chevron-left"></i>
+						Back
+					</Link>
+				</div>
 			</div>
 		);
 	}

@@ -2,7 +2,7 @@
 	width: 1024px;
 	margin: 0 auto;
 	height: 100%;
-	color: #949191;
+	color: #eceeee;
 }
 
 .wrapper h2 {
@@ -15,7 +15,7 @@
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	font-size: 12px;
-	border-bottom: 1px solid #949191;
+	border-bottom: 1px solid #6d6a6a;
 }
 
 .nav li:hover {
@@ -25,4 +25,18 @@
 
 .nav li a:hover {
 	background: none;
+}
+
+.back-button {
+	display: inline-block;
+	margin-top: 25px;
+	background: #787575;
+}
+
+.back-button:hover {
+	background: #78e5ea;
+}
+
+.back-button i {
+	margin-right: 10px;
 }

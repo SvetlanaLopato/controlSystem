@@ -13,6 +13,8 @@ const colSource = {
 	},
 	
 	hover(props, monitor, component) {
+		// const isJustOverThisOne = monitor.isOver({ shallow: true });
+		// console.log('hover', isJustOverThisOne);
 	},
 
 	drop(props, monitor, component) {
@@ -31,7 +33,7 @@ function collect(connect, monitor) {
 		connectDropTarget: connect.dropTarget(),
 		dropedTask: monitor.getDropResult() && monitor.getDropResult().dropedTask,
 		isDroped: monitor.getDropResult() && monitor.getDropResult().isDroped,
-		isOver: monitor.isOver(),
+		// isOver: monitor.isOver(),
 	    isOverCurrent: monitor.isOver({ shallow: true }),
 	    newTaskState: monitor.getDropResult() && monitor.getDropResult().newTaskState,
 	}
@@ -42,6 +44,7 @@ class DropTargetCol extends React.Component {
 		super(props);
 		this.state = {
 			tasks: props.tasks || [],
+			// isOverCurrent: props.isOverCurrent,
 		}
 	}
 
@@ -57,19 +60,18 @@ class DropTargetCol extends React.Component {
 				this.addTask(copyDropedTask);
 			}
 		}
-
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		if (!this.props.isDroped) {
-			return false;
-		}
+		// if (!this.props.isDroped) {
+		// 		return false;
+		// }
 
 		return true;
 	}
 
 	render() {
-		const { connectDropTarget } = this.props;
+		const { connectDropTarget, isOverCurrent } = this.props;
 	
 		return connectDropTarget(
 			<div className="drop-target-col">
@@ -78,6 +80,7 @@ class DropTargetCol extends React.Component {
 						<Task task={task} key={index} />
 					)
 				}
+				{isOverCurrent && <div className="hover-tip"></div>}
 			</div>
 		);
 	}

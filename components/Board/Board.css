@@ -1,23 +1,32 @@
 .board {
 	display: flex;
-	flex-direction: row;
 }
 
 .col {
 	flex-basis: 20%;
-	border: 1px solid #949191;
+	background: #eceeee;
+	margin: 0 6px;
 }
 
 .col-header {
-	height: 70px;
 	font-size: 20px;
 	text-align: center;
-	line-height: 70px;
-	color: #949191;
-	border-bottom: 1px solid #949191;
+	line-height: 50px;
+	color: #6d6a6a;
 }
 
 .drop-target-col {
 	height: 100%;
 	padding-bottom: 50%;
+}
+
+.hover-tip {
+	margin: 20px 20px 30px;
+	height: 175px;
+	border: 2px dashed #bec3c3;
+	background: #f4f4f4;
+}
+
+.board-profile .button {
+	margin-left: 30px;
 }

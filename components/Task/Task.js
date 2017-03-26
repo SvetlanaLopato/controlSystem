@@ -1,8 +1,7 @@
+import './Task.css';
 import React from 'react';
 import { Link } from 'react-router';
 import { DragSource } from 'react-dnd';
-
-import './Task.css';
 
 const Types = {
 	task: 'task',
@@ -39,10 +38,6 @@ class Task extends React.Component {
 				<div className="deadline">Deadline: {this.props.task.deadline}</div>
 				<i className="fa fa-comment"></i>
 				<Link to="/" className="comments">Show comments</Link>
-				{/*<span className="arrow">
-					<i className=" fa fa-chevron-left arrow-left"></i>
-					<i className=" fa fa-chevron-right arrow-right"></i>
-				</span>*/}
 			</div>
 		);
 	}

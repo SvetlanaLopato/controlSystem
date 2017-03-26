@@ -1,0 +1,13 @@
+html, body, #app {
+	height: 100%;
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

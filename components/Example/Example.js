@@ -12,16 +12,23 @@ const style = {
 }
 
 class Card extends React.Component {
+	// getClassNames() {
+	//     return classNames({
+	//         'red':  true,
+	//     });
+	// }
+
 	render() {
 		const { text } = this.props;
-		const items = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+		const items = [{ id: 1, check: true, }, { id: 2, check: false, }, { id: 3, check: true, }, { id: 4 }];
 		return (
-			<div style={style}>
+			<div style={style} >
 				<Square>
 				{
 					items.map(item => <Item item={item} key={item.id} />)
 				}
 				</Square>
+				{items[2].check && <h2>Sveta</h2>}
 			</div>
 		);
 	}

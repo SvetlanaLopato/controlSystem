@@ -1,4 +1,4 @@
-import './index.css';
+import './styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -13,7 +13,7 @@ import Example from './components/Example/Example';
 ReactDOM.render(( 
 		<Router history={browserHistory}>
 			<Route path="/" component={Frame}>
-				<IndexRoute component={Entry}/>
+				<IndexRoute component={Entry} />
 				<Route path="/directory" component={Directory} />
 				<Route path="/list" component={List} />
 				<Route path="/board/:id" component={Board} />

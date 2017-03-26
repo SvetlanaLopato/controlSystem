@@ -1,5 +1,3 @@
-import './List.css';
-
 import React from 'react';
 import { Link } from 'react-router';
 import { Nav, NavItem } from 'react-bootstrap';
@@ -44,6 +42,12 @@ export default class List extends React.Component {
 					))
 				}
 				</Nav>
+				<div className="back-button button">
+					<Link to="/directory">
+						<i className="fa fa-chevron-left"></i>
+						Back
+					</Link>
+				</div>
 			</div>
 		);
 	}
