@@ -1,11 +1,16 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['./index.js']
+        app: './index.js',
+        vendor: './vendor.js',
     },
-    output: { path: __dirname, filename: 'bundle.js' },
+    output: {
+        path: path.join(__dirname, 'public/dist'),
+        filename: '[name].bundle.js',
+    },
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
@@ -25,21 +30,10 @@ module.exports = {
         }, {
             test: /\.png$/,
             loader: "url-loader?limit=100000"
-        }, {
-            test: /\.jpg$/,
-            loader: "file-loader"
-        }, {
-            test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'url?limit=10000&mimetype=application/font-woff'
-        }, {
-            test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'url?limit=10000&mimetype=application/octet-stream'
-        }, {
-            test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'file'
-        }, {
-            test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'url?limit=10000&mimetype=image/svg+xml'
         }]
     },
+    plugins: [
+        new HtmlWebpackPlugin({ template: './index.html' }),
+        new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', minChuncks: 2, }),
+    ],
 };
