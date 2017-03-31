@@ -9,6 +9,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'public/dist'),
+        publicPath: '/',
         filename: '[name].bundle.js',
     },
     devServer: {
@@ -30,6 +31,9 @@ module.exports = {
         }, {
             test: /\.png$/,
             loader: "url-loader?limit=100000"
+        }, {
+            test: /\.less$/,
+            loader: "less-loader!style-loader!css-loader"
         }]
     },
     plugins: [
