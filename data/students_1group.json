@@ -1,0 +1,73 @@
+{
+	"students": [{
+		"id": "1",
+		"name": "Lopato Svetlana Ivanovna",
+		"group": "1"
+
+	}, {
+		"id": "2",
+		"name": "Cherniy Alexey Vitalievich",
+		"group": "1"
+
+	}, {
+		"id": "3",
+		"name": "Ivashkova Elisaveta Pavlovna",
+		"group": "1"
+
+	}, {
+		"id": "4",
+		"name": "Ivan Ivanov Ivanovich",
+		"group": "1"
+
+	}, {
+		"id": "5",
+		"name": "Drozd Pavel Sergeevich",
+		"group": "1"
+
+	}, {
+		"id": "6",
+		"name": "Ersh Artur Urievich",
+		"group": "1"
+
+	}, {
+		"id": "7",
+		"name": "Mirco Olga Leonidovna",
+		"group": "1"
+
+	}, {
+		"id": "8",
+		"name": "Barkun Inna Vladimirovna",
+		"group": "1"
+
+	}, {
+		"id": "9",
+		"name": "Voronina Ksenia Sergeevna",
+		"group": "1"
+
+	}, {
+		"id": "10",
+		"name": "Avramenko Artem Sergeenich",
+		"group": "1"
+
+	}, {
+		"id": "11",
+		"name": "Krishtapovich Andrey Stepanovich",
+		"group": "1"
+
+	}, {
+		"id": "12",
+		"name": "Trahanov Sergey Pavlovich",
+		"group": "1"
+
+	}, {
+		"id": "13",
+		"name": "Pribish Elena Vladimirovna",
+		"group": "1"
+
+	}, {
+		"id": "14",
+		"name": "Lukoshko Maksim Alexandrovich",
+		"group": "1"
+
+	}]
+}

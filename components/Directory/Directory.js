@@ -1,5 +1,4 @@
-import './Directory.css';
-import React from 'react';
+import './Directory.less';
 import { ListGroup, ListGroupItem, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router';
 

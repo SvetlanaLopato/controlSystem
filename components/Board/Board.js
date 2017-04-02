@@ -1,5 +1,4 @@
-import './Board.css';
-import React from 'react';
+import './Board.less';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { Link } from 'react-router';

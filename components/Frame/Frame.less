@@ -1,0 +1,62 @@
+.frame {
+	position: relative;
+	min-height: 100%;
+
+	.main {
+		padding-bottom: 80px;
+
+		> div {
+			color: #787575;
+		}
+
+		.header {
+			height: 60px;
+			margin-bottom: 40px;
+
+			.wrapper {
+				display: flex;
+				justify-content: space-between;
+				font-size: 20px;
+				line-height: 60px;
+				
+				.log-out {
+
+					a {
+						margin-right: 15px;
+					}
+
+					&:hover {
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+
+	.footer,
+	.header {
+		background: #787575;
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		line-height: 40px;
+	}
+}
+
+
+
+.log-in-page {
+	height: 100%;
+	
+	.main  {
+		height: 100%;
+	}
+
+	.footer,
+	.header {
+		display: none;
+	}
+}

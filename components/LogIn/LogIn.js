@@ -1,8 +1,22 @@
-import './LogIn.css';
-import React from 'react';
-import { Link } from 'react-router';
+import './LogIn.less';
+import { browserHistory } from 'react-router';
+import dataBaseService from '../../dataBaseService';
 
 export default class LogIn extends React.Component {
+	handelClick = () => {
+		let userRole = dataBaseService.checkAuthenticity(this.state.email, this.state.password);
+
+		if (userRole === 'student') {
+			browserHistory.push('/list');
+		} else if (userRole === 'teacher') {
+			browserHistory.push('/directory');
+		}
+	}
+
+	handleChange = (e) => {
+		this.setState({ [e.target.id]: e.target.value });
+	}
+
 	render() {
 		return (
 			<div className="log-in">
@@ -10,14 +24,24 @@ export default class LogIn extends React.Component {
 				<form className="log-in-form">
 					<div>
 						<label>Email</label>
-						<input id="email" placeholder="Enter email..." />
+						<input 
+							type="email"
+							onChange={this.handleChange}
+							id="email"
+							placeholder="Enter email..."
+						/>
 					</div>
 					<div>
 						<label>Password</label>
-						<input id="logIn" placeholder="Enter password..." />
+						<input
+							type="password"
+							onChange={this.handleChange}
+							id="password"
+							placeholder="Enter password..."
+						/>
 					</div>
-					<button className="submit-button button">
-						<Link to="/directory">Log in</Link>
+					<button className="submit-button button" onClick={this.handelClick}>
+						<span>Log in</span>
 					</button>
 				</form>
 			</div>

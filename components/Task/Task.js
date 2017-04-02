@@ -1,5 +1,4 @@
-import './Task.css';
-import React from 'react';
+import './Task.less';
 import { Link } from 'react-router';
 import { DragSource } from 'react-dnd';
 
@@ -36,7 +35,7 @@ class Task extends React.Component {
 				<h5 className="name">{this.props.task.name}</h5>
 				<p className="type">{this.props.task.type}</p>
 				<div className="deadline">Deadline: {this.props.task.deadline}</div>
-				<i className="fa fa-comment"></i>
+				<i className="fa fa-comment comment-icon"></i>
 				<Link to="/" className="comments">Show comments</Link>
 			</div>
 		);

@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router';
 import { Nav, NavItem } from 'react-bootstrap';
 
 export default class List extends React.Component {
 	render() {
+		console.log(this.props.location.query);
 		const list = [{
 			id: 1,
 			subject: 'Phisics',

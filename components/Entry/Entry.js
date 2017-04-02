@@ -1,5 +1,4 @@
-import './Entry.css';
-import React from 'react';
+import './Entry.less';
 
 import LogIn from '../LogIn/LogIn';
 

@@ -1,10 +1,11 @@
-import './Frame.css';
-import React from 'react';
+import './Frame.less';
 import { Link } from 'react-router';
 
-export default class Frame extends React.Component {
+export default class Frame extends React.Component {	
 	render() {
 		let logInPage;
+		// console.log(this.props.location.query);
+
 		if (!this.props.routes[1].path) {
 			//if it's logIn page footer and header is hidden
 			logInPage = true;

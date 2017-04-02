@@ -1,0 +1,11 @@
+{
+	"teachers": [{
+		"name": "Kozlova Elena Ivanovna",
+		"email": "mail@bsu.by",
+		"password": "1"
+	}, {
+		"name": "Admin",
+		"email": "admin@bsu.by",
+		"password": "1"
+	}]
+}
