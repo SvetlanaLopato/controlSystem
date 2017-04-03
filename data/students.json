@@ -1,30 +1,30 @@
 {
 	"students": [{
-		"id": "1",
+		"id": 1,
 		"name": "Lopato Svetlana Ivanovna",
 		"email": "user@bsu.by",
 		"password": "1",
 		"group": "1"
 	}, {
-		"id": "2",
+		"id":2,
 		"name": "Cherniy Alexey Vitalievich",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "1"
+		"group": "6"
 	}, {
-		"id": "3",
+		"id": 3,
 		"name": "Ivashkova Elisaveta Pavlovna",
 		"email": "user@bsu.by",
 		"password": "1",
 		"group": "1"
 	}, {
-		"id": "4",
+		"id": 4,
 		"name": "Ivan Ivanov Ivanovich",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "1"
+		"group": "9"
 	}, {
-		"id": "5",
+		"id": 5,
 		"name": "Drozd Pavel Sergeevich",
 		"email": "user@bsu.by",
 		"password": "1",

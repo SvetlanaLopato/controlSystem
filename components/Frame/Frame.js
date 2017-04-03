@@ -1,13 +1,20 @@
 import './Frame.less';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
+import dataBaseService from '../../dataBaseService';
 
-export default class Frame extends React.Component {	
+export default class Frame extends React.Component {
+
+	componentWillMount() {
+		if (!dataBaseService.isAuthotized()) {
+			browserHistory.push('/');
+		}
+	}
+
 	render() {
 		let logInPage;
-		// console.log(this.props.location.query);
 
 		if (!this.props.routes[1].path) {
-			//if it's logIn page footer and header is hidden
+			//if it's logIn page - footer and header is hidden
 			logInPage = true;
 		}
 
@@ -16,7 +23,7 @@ export default class Frame extends React.Component {
 				<main className="main">
 					<header className="header">
 						<div className="wrapper">
-							<span className="admin">Admin</span>
+							<div className="admin">{dataBaseService.getUserProperty('name')}</div>
 							<div className="log-out">
 								<Link to="/">Log out</Link>
 								<i className="fa fa-sign-out"></i>

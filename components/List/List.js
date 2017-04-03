@@ -1,9 +1,8 @@
 import { Link } from 'react-router';
-import { Nav, NavItem } from 'react-bootstrap';
 
 export default class List extends React.Component {
 	render() {
-		console.log(this.props.location.query);
+		console.log(this.props);
 		const list = [{
 			id: 1,
 			subject: 'Phisics',
@@ -33,15 +32,15 @@ export default class List extends React.Component {
 		return (
 			<div className="wrapper">
 				<h2>List:</h2>
-				<Nav>
-				{
-					list.map((item, index) => (
-						<NavItem href={"/board/" + index} key={index}>
-							{item.name}
-						</NavItem>
-					))
-				}
-				</Nav>
+				<ul className="nav">
+					{
+						list.map((item, index) => (
+							<li key={index}>
+								<Link to={"/board/" + index}>{item.name}</Link>
+							</li>
+						))
+					}
+				</ul>
 				<div className="back-button button">
 					<Link to="/directory">
 						<i className="fa fa-chevron-left"></i>
