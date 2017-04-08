@@ -3,16 +3,27 @@ import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { Link } from 'react-router';
 
+import dataBaseService from '../../dataBaseService';
 import Task from '../Task/Task';
 import DropTargetCol from './DropTargetCol';
 
 class Board extends React.Component {
 	constructor() {
 		super();
+
 		this.state = {
 			tasksCol5:taskCol5,
 			tasksCol4: taskCol4,
 		};
+	}
+
+	componentWillMount() {
+		this.setState({
+			reviewTasks: dataBaseService.getTasks(this.props.params.param),
+		});
+
+		console.log('getTasks ', dataBaseService.getTasks(this.props.params.param));
+
 	}
 
 	render() {

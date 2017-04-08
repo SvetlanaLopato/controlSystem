@@ -1,18 +1,21 @@
 import { teachers } from './data/teachers';
 import { students } from './data/students';
+// import { subjects } from './data/tasks';
 
 function dataBaseService() {
 	const TEACHER_ROLE = 'teacher';
 	const STUDENT_ROLE = 'student';
-	let currentUserId;
+	let currentUserId, boardParam, selectedGroup;
 
 	return {
 		isAuthotized,
 		checkAuthenticity,
 		getUserProperty,
 		// getUser,
-		// getUserRole,
-		getGroupsList,
+		getUserRole,
+		getStudentsList,
+		getSubjectsList,
+		getTasks,
 	}
 
 	function isAuthotized() {
@@ -39,35 +42,93 @@ function dataBaseService() {
 	function getUserProperty(property) {
 		let value;
 
-		[...teachers, ...students].map(user => {
+		[...teachers, ...students].forEach(user => {
 			if (user.id === currentUserId) {
 				value = user[property];
 			}
 		});
 
-		return value;
+		return value || [];
 	}
 
-	function getGroupsList() {
-		console.log(getUserProperty('groups'));
-		return [];
+	function getStudentsList(group = selectedGroup) {
+		let studentList = [];
+		selectedGroup = group;
+
+		students.forEach(student => {
+			if (student.group === group) {
+				studentList.push(student);
+			}
+		})
+
+		return studentList;
 	}
 
-	// function getUser(id) {
-	// 	[...teacher, ...students].map(user => {
-	// 		if (user.id === id) {
-	// 			return user;
+	function getSubjectsList() {
+		let subjects = getUserProperty('subjects').map(subject => subject.title);
+
+		return subjects;
+	}
+
+	////////////////////////////////////////
+
+	function getStudentTasks(id) {
+		let tasks;
+
+		students.forEach(student => {
+			if (student.id === id) {
+				tasks = transformTasks(student.subjects);
+			}
+		})
+
+		return tasks;
+	}
+
+	function filterTasksBySubject(tasks = [], subject) {
+		let filteredTask = tasks.filter(task => task.title === subject)
+
+		return filteredTask;
+	}
+
+	function getTasks(boardParam) {
+		if (getUserRole() === STUDENT_ROLE) {
+			return filterTasksBySubject(getStudentTasks(currentUserId), boardParam);
+		} else {
+			return filterTasksBySubject(getStudentTasks(Number(boardParam)), getUserProperty('subject'));
+		}
+	}
+
+	function transformTasks(studentSubjects) {
+		let transformedTasks = [];
+
+		studentSubjects.forEach(subject => {
+			subject.tasks.forEach(task => {
+				transformedTasks.push(Object.assign(task, { title: subject.title }));
+			});
+		});
+
+		return transformedTasks;
+	}
+
+	// function getSubjectInfo(subject) {
+	// 	let subjectInfo;
+
+	// 	subjects.map(subject => {
+	// 		if (subject.title === subject) {
+	// 			subjectInfo = subject;
 	// 		}
 	// 	})
+
+	// 	return subjectInfo;
 	// }
 
-	// function getUserRole(id) {
-	// 	if (teachers.find(user => user.id === id) > -1) {
-	// 		return TEACHER_ROLE;
-	// 	} else if (student.find(user => user.id === id) > -1) {
-	// 		return STUDENT_ROLE;
-	// 	}
-	// }
+	function getUserRole() {
+		if (teachers.findIndex(teacher => teacher.id === currentUserId) > -1) {
+			return TEACHER_ROLE;
+		} else if (students.findIndex(student => student.id === currentUserId) > -1) {
+			return STUDENT_ROLE;
+		}
+	}
 }	
 
 export default dataBaseService();

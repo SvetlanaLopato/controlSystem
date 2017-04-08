@@ -3,8 +3,19 @@ import { browserHistory } from 'react-router';
 import dataBaseService from '../../dataBaseService';
 
 export default class LogIn extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			email: '',
+			password: '',
+		};
+	}
+
 	handelClick = () => {
-		let userRole = dataBaseService.checkAuthenticity(this.state.email, this.state.password);
+		let userRole;
+		if (this.state.email && this.state.password) {
+			userRole = dataBaseService.checkAuthenticity(this.state.email, this.state.password);
+		}
 
 		if (userRole === 'student') {
 			browserHistory.push('/list');
@@ -40,9 +51,9 @@ export default class LogIn extends React.Component {
 							placeholder="Enter password..."
 						/>
 					</div>
-					<button className="submit-button button" onClick={this.handelClick}>
+					<div className="submit-button button" onClick={this.handelClick}>
 						<span>Log in</span>
-					</button>
+					</div>
 				</form>
 			</div>
 		);

@@ -1,48 +1,42 @@
 import { Link } from 'react-router';
+import dataBaseService from '../../dataBaseService';
 
 export default class List extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			list: [],
+		};
+	}
+
+	componentWillMount() {
+		this.setState({
+			list: dataBaseService.getUserRole() === 'teacher' ?
+				  dataBaseService.getStudentsList(this.props.location.query.group) :
+				  dataBaseService.getSubjectsList(),
+		})
+	}
+
 	render() {
-		console.log(this.props);
-		const list = [{
-			id: 1,
-			subject: 'Phisics',
-			name: 'Sara',
-			status: 'review',
-			mark: 10,
-		}, {
-			id: 2,
-			subject: 'Phisics',
-			name: 'Sara',
-			status: 'in progress',
-			mark: 2,
-		}, {
-			id: 3,
-			subject: 'Phisics',
-			name: 'joh',
-			status: 'done',
-			mark: 8,
-		}, {
-			id: 4,
-			subject: 'Phisics',
-			name: 'Katty',
-			status: 'in progress',
-			mark: 9,
-		}];
+		const isTeacher = dataBaseService.getUserRole() === 'teacher';
 
 		return (
 			<div className="wrapper">
 				<h2>List:</h2>
 				<ul className="nav">
 					{
-						list.map((item, index) => (
+						this.state.list.map((item, index) => (
 							<li key={index}>
-								<Link to={"/board/" + index}>{item.name}</Link>
+							{
+								isTeacher ? <Link to={"/board/" + item.id}>{item.name}</Link> :
+											<Link to={"/board/" + item}>{item}</Link>
+							}
 							</li>
 						))
 					}
 				</ul>
 				<div className="back-button button">
-					<Link to="/directory">
+					<Link to={isTeacher ? '/directory' : '/'}>
 						<i className="fa fa-chevron-left"></i>
 						Back
 					</Link>

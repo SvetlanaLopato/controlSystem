@@ -15,7 +15,7 @@ ReactDOM.render((
 				<IndexRoute component={Entry} />
 				<Route path="directory" component={Directory} />
 				<Route path="list" component={List} />
-				<Route path="board/:id" component={Board} />
+				<Route path="board/:param" component={Board} />
 			</Route>
 		</Router>
 		/*<Example />*/

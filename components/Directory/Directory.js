@@ -15,8 +15,7 @@ export default class Directory extends React.Component {
 	}
 
 	render() {
-		var arr = ['1 group', '2 group', '3 group', 
-				'4 group', '5 group', '6 group'];
+
 		return (
 			<div className="wrapper">
 				<h2>List of groups:</h2>
@@ -24,7 +23,7 @@ export default class Directory extends React.Component {
 					{
 						this.state.groups.map((group, index) => (
 							<li key={index}>
-								<Link to="list/">{group + ' group'}</Link>
+								<Link to={{ pathname: 'list/', query:{ group: group } }}>{group + ' group'}</Link>
 							</li>
 						))
 					}

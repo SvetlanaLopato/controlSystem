@@ -1,0 +1,48 @@
+{
+	"subjects": [{
+		"title": "Phisics",
+		"tasks": [{
+			"type": "report",
+			"name": "Andrey Vilevski",
+			"deadline": "01.02.2017"
+		}, {
+			"type": "test",
+			"name": "Elena Kozlova",
+			"deadline": "22.05.2017"
+		}, {
+			"type": "colloquium",
+			"name": "Elena Kozlova",
+			"deadline": "31.03.2017"
+		}]
+	}, {
+		"title": "Maths",
+		"tasks": [{
+			"type": "report",
+			"name": "Andrey Vilevski",
+			"deadline": "01.02.2017"
+		}, {
+			"type": "test",
+			"name": "Elena Kozlova",
+			"deadline": "22.05.2017"
+		}, {
+			"type": "colloquium",
+			"name": "Elena Kozlova",
+			"deadline": "31.03.2017"
+		}]
+	}, {
+		"title": "Computer Network",
+		"tasks": [{
+			"type": "report",
+			"name": "Andrey Vilevski",
+			"deadline": "01.02.2017"
+		}, {
+			"type": "test",
+			"name": "Elena Kozlova",
+			"deadline": "22.05.2017"
+		}, {
+			"type": "colloquium",
+			"name": "Elena Kozlova",
+			"deadline": "31.03.2017"
+		}]
+	}]
+}
