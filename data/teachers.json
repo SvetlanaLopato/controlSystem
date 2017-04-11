@@ -1,17 +1,17 @@
 {
 	"teachers": [{
 		"id": 50,
-		"name": "Kozlova Elena Ivanovna",
+		"name": "Saratova Elena Alexandrovna",
 		"email": "mail@bsu.by",
 		"password": "1",
 		"subject": "Phisics",
 		"groups": [1, 2]
 	}, {
 		"id": 51,
-		"name": "Admin",
+		"name": "Kozlova Elena Ivanovna",
 		"email": "admin@bsu.by",
 		"password": "1",
 		"subject": "Maths",
-		"groups": [2, 3]
+		"groups": [1, 2, 3]
 	}]
 }

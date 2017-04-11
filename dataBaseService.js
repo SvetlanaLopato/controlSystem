@@ -5,7 +5,7 @@ import { students } from './data/students';
 function dataBaseService() {
 	const TEACHER_ROLE = 'teacher';
 	const STUDENT_ROLE = 'student';
-	let currentUserId, boardParam, selectedGroup;
+	let currentUserId, boardParam, selectedGroup, currentTasks;
 
 	return {
 		isAuthotized,
@@ -16,6 +16,7 @@ function dataBaseService() {
 		getStudentsList,
 		getSubjectsList,
 		getTasks,
+		editState,
 	}
 
 	function isAuthotized() {
@@ -45,6 +46,7 @@ function dataBaseService() {
 		[...teachers, ...students].forEach(user => {
 			if (user.id === currentUserId) {
 				value = user[property];
+				return;
 			}
 		});
 
@@ -70,14 +72,13 @@ function dataBaseService() {
 		return subjects;
 	}
 
-	////////////////////////////////////////
-
 	function getStudentTasks(id) {
 		let tasks;
 
 		students.forEach(student => {
 			if (student.id === id) {
 				tasks = transformTasks(student.subjects);
+				return;
 			}
 		})
 
@@ -91,11 +92,19 @@ function dataBaseService() {
 	}
 
 	function getTasks(boardParam) {
+		let copyTasks = [];
+
 		if (getUserRole() === STUDENT_ROLE) {
-			return filterTasksBySubject(getStudentTasks(currentUserId), boardParam);
+			currentTasks = filterTasksBySubject(getStudentTasks(currentUserId), boardParam);
 		} else {
-			return filterTasksBySubject(getStudentTasks(Number(boardParam)), getUserProperty('subject'));
+			currentTasks = filterTasksBySubject(getStudentTasks(Number(boardParam)), getUserProperty('subject'));
 		}
+
+		currentTasks.forEach(task => {
+			copyTasks.push(Object.assign({}, task));
+		})
+
+		return copyTasks;
 	}
 
 	function transformTasks(studentSubjects) {
@@ -110,17 +119,14 @@ function dataBaseService() {
 		return transformedTasks;
 	}
 
-	// function getSubjectInfo(subject) {
-	// 	let subjectInfo;
-
-	// 	subjects.map(subject => {
-	// 		if (subject.title === subject) {
-	// 			subjectInfo = subject;
-	// 		}
-	// 	})
-
-	// 	return subjectInfo;
-	// }
+	function editState(id, newState) {
+		currentTasks.forEach(task => {
+			if (task.id === id) {
+				task.state = newState;
+				return;
+			}
+		})
+	}
 
 	function getUserRole() {
 		if (teachers.findIndex(teacher => teacher.id === currentUserId) > -1) {

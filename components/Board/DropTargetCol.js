@@ -1,5 +1,6 @@
 import { DropTarget } from 'react-dnd';
 
+import dataBaseService from '../../dataBaseService';
 import Task from '../Task/Task';
 
 const Types = {
@@ -47,41 +48,19 @@ class DropTargetCol extends React.Component {
 		}
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (nextProps.isDroped && nextProps.dropedTask.state !== nextProps.newTaskState) {
-			if (nextProps.dropedTask.state === nextProps.colState) {
-				this.removeTask(nextProps.dropedTask);
+	componentWillUpdate() {
+		if (this.props.isDroped && this.props.dropedTask.state !== this.props.newTaskState) {
+			if (this.props.dropedTask.state === this.props.colState) {
+				this.removeTask(this.props.dropedTask);
 			}
 
-			if (nextProps.newTaskState === nextProps.colState) {
-				const copyDropedTask = Object.assign({}, nextProps.dropedTask);
+			if (this.props.newTaskState === this.props.colState) {
+				const copyDropedTask = Object.assign({}, this.props.dropedTask);
 
 				this.addTask(copyDropedTask);
+				dataBaseService.editState(this.props.dropedTask.id, this.props.colState);
 			}
 		}
-	}
-
-	shouldComponentUpdate(nextProps, nextState) {
-		// if (!this.props.isDroped) {
-		// 		return false;
-		// }
-
-		return true;
-	}
-
-	render() {
-		const { connectDropTarget, isOverCurrent } = this.props;
-	
-		return connectDropTarget(
-			<div className="drop-target-col">
-				{
-					this.state.tasks.map((task, index) => 
-						<Task task={task} key={index} />
-					)
-				}
-				{isOverCurrent && <div className="hover-tip"></div>}
-			</div>
-		);
 	}
 
 	removeTask = (dropedTask) => {
@@ -102,6 +81,21 @@ class DropTargetCol extends React.Component {
 			state.tasks.push(newTask);
 			return state;
 		});
+	}
+
+	render() {
+		const { connectDropTarget, isOverCurrent } = this.props;
+	
+		return connectDropTarget(
+			<div className="drop-target-col">
+				{
+					this.state.tasks.map((task, index) => 
+						<Task task={task} key={index} />
+					)
+				}
+				{isOverCurrent && <div className="hover-tip"></div>}
+			</div>
+		);
 	}
 }
 

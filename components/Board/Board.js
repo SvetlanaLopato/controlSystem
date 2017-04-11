@@ -8,22 +8,27 @@ import Task from '../Task/Task';
 import DropTargetCol from './DropTargetCol';
 
 class Board extends React.Component {
-	constructor() {
-		super();
+	// constructor() {
+	// 	super();
 
-		this.state = {
-			tasksCol5:taskCol5,
-			tasksCol4: taskCol4,
-		};
-	}
-
+	// 	this.state = {
+	// 		tasksCol5:taskCol5,
+	// 		tasksCol4: taskCol4,
+	// 	};
+	// }
 	componentWillMount() {
+		// const allTasks = dataBaseService.getTasks(this.props.params.param);
+
 		this.setState({
-			reviewTasks: dataBaseService.getTasks(this.props.params.param),
+			tasks: dataBaseService.getTasks(this.props.params.param),
 		});
 
-		console.log('getTasks ', dataBaseService.getTasks(this.props.params.param));
+		// console.log('getTasks ', dataBaseService.getTasks(this.props.params.param));
+	}
 
+	getTasksByState = (state) => {
+		// console.log(state, this.state.tasks.filter(task => task.state === state));
+		return dataBaseService.getTasks(this.props.params.param).filter(task => task.state === state);
 	}
 
 	render() {
@@ -32,24 +37,24 @@ class Board extends React.Component {
 				<div className="board">
 					<div className="col">
 						<div className="col-header">Blocked</div>
-						<DropTargetCol colState="blocked" />
+						<DropTargetCol colState="blocked" tasks={this.getTasksByState('blocked')}/>
 					</div>
 					<div className="col">
 						<div className="col-header">To Do</div>
-						<DropTargetCol colState="to do" />
+						<DropTargetCol colState="to do" tasks={this.getTasksByState('to do')}/>
 					</div>
 					<div className="col">
 						<div className="col-header">In Progress</div>
-						<DropTargetCol colState="in progress" />
+						<DropTargetCol colState="in progress" tasks={this.getTasksByState('in progress')}/>
 					</div>
 					<div className="col">
 						<div className="col-header">Review</div>
-						<DropTargetCol colState="review" tasks={this.state.tasksCol4}>
+						<DropTargetCol colState="review" tasks={this.getTasksByState('review')}>
 						</DropTargetCol>
 					</div>
 					<div className="col">
 						<div className="col-header">Done</div>
-						<DropTargetCol colState="done" tasks={this.state.tasksCol5}>
+						<DropTargetCol colState="done" tasks={this.getTasksByState('done')}>
 						</DropTargetCol>
 					</div>
 				</div>
