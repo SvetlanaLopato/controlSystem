@@ -8,10 +8,10 @@ function dataBaseService() {
 	let currentUserId, boardParam, selectedGroup, currentTasks;
 
 	return {
-		isAuthotized,
 		checkAuthenticity,
+		isAuthotized,
 		getUserProperty,
-		// getUser,
+		getStudentProperty,
 		getUserRole,
 		getStudentsList,
 		getSubjectsList,
@@ -54,16 +54,16 @@ function dataBaseService() {
 	}
 
 	function getStudentsList(group = selectedGroup) {
-		let studentList = [];
+		let studentsList = [];
 		selectedGroup = group;
 
 		students.forEach(student => {
 			if (student.group === group) {
-				studentList.push(student);
+				studentsList.push(student);
 			}
 		})
 
-		return studentList;
+		return studentsList;
 	}
 
 	function getSubjectsList() {
@@ -134,6 +134,20 @@ function dataBaseService() {
 		} else if (students.findIndex(student => student.id === currentUserId) > -1) {
 			return STUDENT_ROLE;
 		}
+	}
+
+	function getStudentProperty(id, property) {
+		let value;
+
+		students.forEach(student => {
+			if (student.id === parseInt(id)) {
+				console.log(student)
+				value = student[property];
+				return;
+			}
+		})
+
+		return value;
 	}
 }	
 

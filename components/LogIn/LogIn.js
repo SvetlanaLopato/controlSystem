@@ -8,6 +8,7 @@ export default class LogIn extends React.Component {
 		this.state = {
 			email: '',
 			password: '',
+			isValid: true,
 		};
 	}
 
@@ -21,6 +22,8 @@ export default class LogIn extends React.Component {
 			browserHistory.push('/list');
 		} else if (userRole === 'teacher') {
 			browserHistory.push('/directory');
+		} else {
+			this.setState({ isValid: false });
 		}
 	}
 
@@ -51,6 +54,9 @@ export default class LogIn extends React.Component {
 							placeholder="Enter password..."
 						/>
 					</div>
+					{
+						!this.state.isValid && <div className="invalid">The email or password you’ve entered doesn’t match any account</div>
+					}
 					<div className="submit-button button" onClick={this.handelClick}>
 						<span>Log in</span>
 					</div>

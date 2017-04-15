@@ -32,32 +32,55 @@ class Board extends React.Component {
 	}
 
 	render() {
+		const BLOCKED = 'blocked',
+			  TODO = 'to do',
+			  INPROGRESS = 'in progress',
+			  REVIEW = 'review',
+			  DONE = 'done';
+		const userRole = dataBaseService.getUserRole();
+
 		return (
 			<div className="board-profile">
+				<div className="board-description">
+					<p>
+						<span>Subject: </span>
+						{
+							userRole === 'student' ? this.props.params.param : dataBaseService.getUserProperty('subject')
+						}
+					</p>
+					{
+						dataBaseService.getUserRole() === 'teacher' &&
+						<p><span>Subject: </span>{dataBaseService.getUserProperty('subject')}</p> &&
+						<p><span>Student: </span>{
+							dataBaseService.getStudentProperty(this.props.params.param, 'name') + ' (' + dataBaseService.getStudentProperty(this.props.params.param, 'group') + ' group)'
+						}</p>
+					}
+				</div>
 				<div className="board">
 					<div className="col">
 						<div className="col-header">Blocked</div>
-						<DropTargetCol colState="blocked" tasks={this.getTasksByState('blocked')}/>
+						<DropTargetCol colState={BLOCKED} tasks={this.getTasksByState(BLOCKED)}/>
 					</div>
 					<div className="col">
 						<div className="col-header">To Do</div>
-						<DropTargetCol colState="to do" tasks={this.getTasksByState('to do')}/>
+						<DropTargetCol colState={TODO} tasks={this.getTasksByState(TODO)}/>
 					</div>
 					<div className="col">
 						<div className="col-header">In Progress</div>
-						<DropTargetCol colState="in progress" tasks={this.getTasksByState('in progress')}/>
+						<DropTargetCol colState={INPROGRESS} tasks={this.getTasksByState(INPROGRESS)}/>
 					</div>
 					<div className="col">
 						<div className="col-header">Review</div>
-						<DropTargetCol colState="review" tasks={this.getTasksByState('review')}>
+						<DropTargetCol colState={REVIEW} tasks={this.getTasksByState(REVIEW)}>
 						</DropTargetCol>
 					</div>
 					<div className="col">
 						<div className="col-header">Done</div>
-						<DropTargetCol colState="done" tasks={this.getTasksByState('done')}>
+						<DropTargetCol colState={DONE} tasks={this.getTasksByState(DONE)}>
 						</DropTargetCol>
 					</div>
 				</div>
+				<div className="board-instruction">Drag task for changing state*</div>
 				<div className="back-button button">
 					<Link to="/list">
 						<i className="fa fa-chevron-left"></i>
@@ -70,58 +93,3 @@ class Board extends React.Component {
 }
 
 export default DragDropContext(HTML5Backend)(Board);
-
-let taskCol5 = [{
-			id: 1,
-			title: 'Computer nerwork',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Kolokvium',
-			state: 'done',
-		}, {
-			id: 2,
-			title: 'Science',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Exercise',
-			state: 'done',
-		}, /*{
-			id: 3,
-			title: 'Math',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Presentation',
-		}, {
-			id: 4,
-			title: 'Computer nerwork',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Lab 1',
-		}*/];
-let taskCol4 = [{
-			id: 5,
-			title: 'Maths',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Test',
-			state: 'review',
-		}, {
-			id: 8,
-			title: 'Phisics',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Lab 4',
-			state: 'review',
-		}, /*{
-			id: 6,
-			title: 'Math',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Presentation',
-		}, {
-			id: 7,
-			title: 'Computer nerwork',
-			name: 'Andrey Lukashenko',
-			deadline: '18.03.2017',
-			type: 'Lab 1',
-		}*/];

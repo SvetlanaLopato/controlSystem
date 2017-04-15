@@ -1,7 +1,7 @@
 @import "~normalize.css";
 @import "/styles/bootstrap.css";
 @import "/styles/font-awesome-4.7.0/css/font-awesome.min.css";
-@import "/variables.less";
+// @import "/variables.less";
 
 * {
   margin: 0;
@@ -15,4 +15,31 @@ html, body, #app {
 a, a:hover {
 	text-decoration: none;
 	color: inherit;
+}
+
+.button {
+	border: none;
+	line-height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	cursor: pointer;
+
+	&.submit-button {
+		width: 65%;
+		margin-left: 35%;
+		text-transform: uppercase;
+		font-weight: bold;
+		background: #78e5ea;
+	}
+
+	span, a {
+		display: inline-block;
+		width: 100%;
+		padding: 0 20px;
+	}
+}
+
+.invalid {
+	color: #eb3232;
+	margin-bottom: 10px;
 }
