@@ -8,26 +8,13 @@ import Task from '../Task/Task';
 import DropTargetCol from './DropTargetCol';
 
 class Board extends React.Component {
-	// constructor() {
-	// 	super();
-
-	// 	this.state = {
-	// 		tasksCol5:taskCol5,
-	// 		tasksCol4: taskCol4,
-	// 	};
-	// }
 	componentWillMount() {
-		// const allTasks = dataBaseService.getTasks(this.props.params.param);
-
 		this.setState({
 			tasks: dataBaseService.getTasks(this.props.params.param),
 		});
-
-		// console.log('getTasks ', dataBaseService.getTasks(this.props.params.param));
 	}
 
 	getTasksByState = (state) => {
-		// console.log(state, this.state.tasks.filter(task => task.state === state));
 		return dataBaseService.getTasks(this.props.params.param).filter(task => task.state === state);
 	}
 

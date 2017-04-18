@@ -12,8 +12,9 @@ export default class LogIn extends React.Component {
 		};
 	}
 
-	handelClick = () => {
+	handleClick = () => {
 		let userRole;
+
 		if (this.state.email && this.state.password) {
 			userRole = dataBaseService.checkAuthenticity(this.state.email, this.state.password);
 		}
@@ -57,7 +58,7 @@ export default class LogIn extends React.Component {
 					{
 						!this.state.isValid && <div className="invalid">The email or password you’ve entered doesn’t match any account</div>
 					}
-					<div className="submit-button button" onClick={this.handelClick}>
+					<div className="submit-button button" onClick={this.handleClick}>
 						<span>Log in</span>
 					</div>
 				</form>

@@ -16,7 +16,8 @@ function dataBaseService() {
 		getStudentsList,
 		getSubjectsList,
 		getTasks,
-		editState,
+		editTaskProperty,
+		setComment,
 	}
 
 	function isAuthotized() {
@@ -119,10 +120,14 @@ function dataBaseService() {
 		return transformedTasks;
 	}
 
-	function editState(id, newState) {
+	function editTaskProperty(id, propertyName, newValue) {
 		currentTasks.forEach(task => {
 			if (task.id === id) {
-				task.state = newState;
+				if (Array.isArray(task[propertyName])) {
+					task[propertyName].push(newValue);
+				} else {
+					task[propertyName] = newValue;
+				}
 				return;
 			}
 		})
@@ -141,13 +146,21 @@ function dataBaseService() {
 
 		students.forEach(student => {
 			if (student.id === parseInt(id)) {
-				console.log(student)
 				value = student[property];
 				return;
 			}
 		})
 
 		return value;
+	}
+
+	function setComment(id, text) {
+		let message = {
+			author: getUserProperty('name'),
+			message: text,
+		};
+
+		editTaskProperty(id, 'comments', message)
 	}
 }	
 

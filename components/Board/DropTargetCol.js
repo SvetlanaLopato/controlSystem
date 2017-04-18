@@ -8,15 +8,6 @@ const Types = {
 };
 
 const colSource = {
-	canDrop(props, monitor) {
-		return true;
-	},
-	
-	hover(props, monitor, component) {
-		// const isJustOverThisOne = monitor.isOver({ shallow: true });
-		// console.log('hover', isJustOverThisOne);
-	},
-
 	drop(props, monitor, component) {
 		const dropedTask = monitor.getItem();
 
@@ -33,7 +24,6 @@ function collect(connect, monitor) {
 		connectDropTarget: connect.dropTarget(),
 		dropedTask: monitor.getDropResult() && monitor.getDropResult().dropedTask,
 		isDroped: monitor.getDropResult() && monitor.getDropResult().isDroped,
-		// isOver: monitor.isOver(),
 	    isOverCurrent: monitor.isOver({ shallow: true }),
 	    newTaskState: monitor.getDropResult() && monitor.getDropResult().newTaskState,
 	}
@@ -44,21 +34,20 @@ class DropTargetCol extends React.Component {
 		super(props);
 		this.state = {
 			tasks: props.tasks || [],
-			// isOverCurrent: props.isOverCurrent,
 		}
 	}
 
-	componentWillUpdate() {
-		if (this.props.isDroped && this.props.dropedTask.state !== this.props.newTaskState) {
-			if (this.props.dropedTask.state === this.props.colState) {
-				this.removeTask(this.props.dropedTask);
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.isDroped && nextProps.dropedTask.state !== nextProps.newTaskState) {
+			if (nextProps.dropedTask.state === nextProps.colState) {
+				this.removeTask(nextProps.dropedTask);
 			}
 
-			if (this.props.newTaskState === this.props.colState) {
-				const copyDropedTask = Object.assign({}, this.props.dropedTask);
+			if (nextProps.newTaskState === nextProps.colState) {
+				const copyDropedTask = Object.assign({}, nextProps.dropedTask);
 
 				this.addTask(copyDropedTask);
-				dataBaseService.editState(this.props.dropedTask.id, this.props.colState);
+				dataBaseService.editTaskProperty(nextProps.dropedTask.id, 'state', nextProps.colState);
 			}
 		}
 	}
@@ -85,11 +74,12 @@ class DropTargetCol extends React.Component {
 
 	render() {
 		const { connectDropTarget, isOverCurrent } = this.props;
+		const { tasks } = this.state;
 	
 		return connectDropTarget(
 			<div className="drop-target-col">
 				{
-					this.state.tasks.map((task, index) => 
+					tasks.map((task, index) => 
 						<Task task={task} key={index} />
 					)
 				}

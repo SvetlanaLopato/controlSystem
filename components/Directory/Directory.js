@@ -23,7 +23,7 @@ export default class Directory extends React.Component {
 					{
 						this.state.groups.map((group, index) => (
 							<li key={index}>
-								<Link to={{ pathname: 'list/', query:{ group: group } }}>{group + ' group'}</Link>
+								<Link to={{ pathname: 'list', query:{ group: group } }}>{group + ' group'}</Link>
 							</li>
 						))
 					}
