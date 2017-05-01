@@ -11,14 +11,14 @@ export default class Comments extends React.Component {
 	}
 
 	addMessage = () => {
-		let message = {
+		let messageInfo = {
 			author: dataBaseService.getUserProperty('name'),
 			message: document.getElementById('new-message').value.trim(),
 		};
 
 
-		if (message.message) {
-			dataBaseService.editTaskProperty(this.props.taskId, 'comments', message);
+		if (messageInfo.message) {
+			dataBaseService.editTaskProperty(this.props.taskId, 'comments', messageInfo);
 			document.getElementById('new-message').value = '';
 			this.setState({ needUpdate: true });
 		}
@@ -49,7 +49,7 @@ export default class Comments extends React.Component {
 							className="message-input"
 							placeholder="Enter the message..."
 					/>
-					<div className="add-button" onClick={this.addMessage}>Add</div>
+					<div className="save-button" onClick={this.addMessage}>Add</div>
 				</div>
 			</div>
 		);

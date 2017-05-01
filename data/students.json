@@ -10,6 +10,7 @@
 			"tasks": [{
 				"id": 100,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -26,6 +27,7 @@
 			}, {
 				"id": 101,
 				"type": "test 1",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -36,6 +38,7 @@
 			}, {
 				"id": 102,
 				"type": "test 2",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -43,6 +46,7 @@
 			}, {
 				"id": 103,
 				"type": "test 3",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -59,6 +63,7 @@
 			}, {
 				"id": 104,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -75,6 +80,7 @@
 			"tasks": [{
 				"id": 105,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -82,6 +88,7 @@
 			}, {
 				"id": 106,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -101,6 +108,7 @@
 			"tasks": [{
 				"id": 107,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -117,6 +125,7 @@
 			}, {
 				"id": 108,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -130,6 +139,7 @@
 			}, {
 				"id": 109,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -146,6 +156,7 @@
 			"tasks": [{
 				"id": 107,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -162,6 +173,7 @@
 			}, {
 				"id": 108,
 				"type": "test 1",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -178,6 +190,7 @@
 			}, {
 				"id": 119,
 				"type": "test 2",
+				"link": "",
 				"state": "done",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -194,6 +207,7 @@
 			}, {
 				"id": 109,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -220,6 +234,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -236,6 +251,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -252,6 +268,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -271,6 +288,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -287,6 +305,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -303,6 +322,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -322,6 +342,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -338,6 +359,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -354,6 +376,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -380,6 +403,7 @@
 			"tasks": [{
 				"id": 119,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -396,6 +420,7 @@
 			}, {
 				"id": 120,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -412,6 +437,7 @@
 			}, {
 				"id": 121,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -431,6 +457,7 @@
 			"tasks": [{
 				"id": 122,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -447,6 +474,7 @@
 			}, {
 				"id": 123,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -463,6 +491,7 @@
 			}, {
 				"id": 124,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -482,6 +511,7 @@
 			"tasks": [{
 				"id": 125,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -498,6 +528,7 @@
 			}, {
 				"id": 126,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -514,6 +545,7 @@
 			}, {
 				"id": 127,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -540,6 +572,7 @@
 			"tasks": [{
 				"id": 128,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -556,6 +589,7 @@
 			}, {
 				"id": 129,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -572,6 +606,7 @@
 			}, {
 				"id": 130,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -591,6 +626,7 @@
 			"tasks": [{
 				"id": 131,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -607,6 +643,7 @@
 			}, {
 				"id": 132,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -623,6 +660,7 @@
 			}, {
 				"id": 133,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -642,6 +680,7 @@
 			"tasks": [{
 				"id": 134,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -658,6 +697,7 @@
 			}, {
 				"id": 135,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -674,6 +714,7 @@
 			}, {
 				"id": 136,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -700,6 +741,7 @@
 			"tasks": [{
 				"id": 137,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -716,6 +758,7 @@
 			}, {
 				"id": 138,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -732,6 +775,7 @@
 			}, {
 				"id": 139,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -751,6 +795,7 @@
 			"tasks": [{
 				"id": 140,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -767,6 +812,7 @@
 			}, {
 				"id": 141,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -783,6 +829,7 @@
 			}, {
 				"id": 142,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -802,6 +849,7 @@
 			"tasks": [{
 				"id": 143,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -818,6 +866,7 @@
 			}, {
 				"id": 144,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -834,6 +883,7 @@
 			}, {
 				"id": 145,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -860,6 +910,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -876,6 +927,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -892,6 +944,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -911,6 +964,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -927,6 +981,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -943,6 +998,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -962,6 +1018,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -978,6 +1035,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -994,6 +1052,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1020,6 +1079,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1036,6 +1096,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1052,6 +1113,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1071,6 +1133,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1087,6 +1150,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1103,6 +1167,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1122,6 +1187,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1138,6 +1204,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1154,6 +1221,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1180,6 +1248,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1196,6 +1265,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1212,6 +1282,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1231,6 +1302,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1247,6 +1319,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1263,6 +1336,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1282,6 +1356,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1298,6 +1373,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1314,6 +1390,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1340,6 +1417,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1356,6 +1434,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1372,6 +1451,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1391,6 +1471,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1407,6 +1488,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1423,6 +1505,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1442,6 +1525,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1458,6 +1542,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1474,6 +1559,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1500,6 +1586,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1516,6 +1603,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1532,6 +1620,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1551,6 +1640,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1567,6 +1657,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1583,6 +1674,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1602,6 +1694,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1618,6 +1711,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1634,6 +1728,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1660,6 +1755,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1676,6 +1772,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1692,6 +1789,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1711,6 +1809,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1727,6 +1826,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1743,6 +1843,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1762,6 +1863,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1778,6 +1880,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1794,6 +1897,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1820,6 +1924,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1836,6 +1941,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1852,6 +1958,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1871,6 +1978,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1887,6 +1995,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1903,6 +2012,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1922,6 +2032,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1938,6 +2049,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -1954,6 +2066,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -1980,6 +2093,7 @@
 			"tasks": [{
 				"id": 110,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -1996,6 +2110,7 @@
 			}, {
 				"id": 111,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -2012,6 +2127,7 @@
 			}, {
 				"id": 112,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -2031,6 +2147,7 @@
 			"tasks": [{
 				"id": 113,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -2047,6 +2164,7 @@
 			}, {
 				"id": 114,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -2063,6 +2181,7 @@
 			}, {
 				"id": 115,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",
@@ -2082,6 +2201,7 @@
 			"tasks": [{
 				"id": 116,
 				"type": "report",
+				"link": "",
 				"state": "in progress",
 				"name": "Andrey Vilevski",
 				"deadline": "01.02.2017",
@@ -2098,6 +2218,7 @@
 			}, {
 				"id": 117,
 				"type": "test",
+				"link": "",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -2114,6 +2235,7 @@
 			}, {
 				"id": 118,
 				"type": "colloquium",
+				"link": "",
 				"state": "review",
 				"name": "Elena Kozlova",
 				"deadline": "31.03.2017",

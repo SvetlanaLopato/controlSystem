@@ -9,25 +9,30 @@
 
 }
 
+.modal-footer {
+	display: flex;
+	justify-content: flex-end;
+}
+
 .comments-list {
 	list-style: none;
+}
 
-	.comment-author {
-	    display: inline-block;
-	    width: 32%;
-	    margin-right: 15px;
-		font-weight: bold;
+.comment-message {
+	display: inline-block;
+	width: 65%;
+	vertical-align: top;
+    font-family: cursive;
+}
 
-		&.curernt-user {
-			color: #78e5ea;
-		}
-	}
+.comment-author {
+    display: inline-block;
+    width: 32%;
+    margin-right: 15px;
+	font-weight: bold;
 
-	.comment-message {
-		display: inline-block;
-		width: 65%;
-		vertical-align: top;
-	    font-family: cursive;
+	&.curernt-user {
+		color: #78e5ea;
 	}
 }
 
@@ -35,27 +40,29 @@
 	display: flex;
 	justify-content: space-between;
 
-	.message-input {
-		padding: 10px;
-		width: 80%;
+}
+
+.message-input {
+	padding: 10px;
+	width: 80%;
+	border-radius: 5px;
+	border: 1px solid #bec3c3;
+	outline: none;
+	resize: none;
+}
+
+.save-button {
+		width: 80px;
+		height: 35px;
 		border-radius: 5px;
-		outline: none;
-		resize: none;
-	}
+		line-height: 35px;
+		text-align: center;
+		background: #78e5ea;
+		font-size: 15px;
+		font-weight: bold;
+		color: #ffffff;
 
-	.add-button {
-			width: 80px;
-			height: 35px;
-			border-radius: 5px;
-			line-height: 35px;
-			text-align: center;
-			background: #78e5ea;
-			font-size: 15px;
-			font-weight: bold;
-			color: #ffffff;
-
-			&:hover {
-				cursor: pointer;
-			}
-	}
+		&:hover {
+			cursor: pointer;
+		}
 }

@@ -26,10 +26,6 @@
 		background: #78e5ea;
 	}
 
-	.comment-icon {
-		font-size: 16px;
-		color: #bec3c3;
-	}
 
 	.comments {
 		margin-left: 10px;
@@ -39,4 +35,40 @@
 			cursor: pointer;
 		}
 	}
+
+	.external-link {
+		a {
+			word-break: break-all;
+			text-decoration: underline;
+
+			&:hover {
+				color: #78e5ea;
+			}
+		}
+	}
+}
+
+.comment-icon  {
+	font-size: 16px;
+	color: #bec3c3;
+}
+
+.plus-icon,
+.edit-icon {
+	margin: 0 10px;
+	.comment-icon;
+
+	&:hover {
+		color: #78e5ea;
+		cursor: pointer;
+	}
+}
+
+.link-input {
+	width: 90%;
+	padding: 5px 10px;
+	margin-left: 20px;
+	border: 1px solid #bec3c3;
+	border-radius: 5px;
+	outline: none;
 }
