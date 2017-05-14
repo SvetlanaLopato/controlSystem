@@ -6,13 +6,13 @@
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 100,
 				"type": "report",
 				"link": "",
 				"state": "in progress",
-				"name": "Andrey Vilevski",
+				"name": "Dmitriy Ushakov",
 				"deadline": "01.02.2017",
 				"comments": [{
 					"author": "Lopato Svetlana Ivanovna",
@@ -27,7 +27,7 @@
 			}, {
 				"id": 101,
 				"type": "test 1",
-				"link": "",
+				"link": "https://www.google.com/drive/",
 				"state": "to do",
 				"name": "Elena Kozlova",
 				"deadline": "22.05.2017",
@@ -65,7 +65,7 @@
 				"type": "colloquium",
 				"link": "",
 				"state": "review",
-				"name": "Elena Kozlova",
+				"name": "Dmitriy Ushakov",
 				"deadline": "31.03.2017",
 				"comments": [{
 					"author": "Lopato Svetlana Ivanovna",
@@ -152,6 +152,15 @@
 				}]
 			}]
 		}, {
+			"title": "Programming",
+			"tasks": []
+		}, {
+			"title": "The Theory of Algorithms",
+			"tasks": []
+		}, {
+			"title": "English",
+			"tasks": []
+		}, {
 			"title": "Information Theory",
 			"tasks": [{
 				"id": 107,
@@ -230,7 +239,7 @@
 		"password": "1",
 		"group": "2",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -399,7 +408,7 @@
 		"password": "1",
 		"group": "3",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 119,
 				"type": "report",
@@ -568,7 +577,7 @@
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 128,
 				"type": "report",
@@ -732,12 +741,12 @@
 		}]
 	}, {
 		"id": 5,
-		"name": "Drozd Pavel Sergeevich",
+		"name": "Pavlov Stanislav Igorievich",
 		"email": "user@bsu.by",
 		"password": "1",
 		"group": "2",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 137,
 				"type": "report",
@@ -901,12 +910,12 @@
 		}]
 	}, {
 		"id": 6,
-		"name": "Nesluhovski Igor Alexandrovich",
+		"name": "Nesluhovskiy Igor Alexandrovich",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "2",
+		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1070,12 +1079,12 @@
 		}]
 	}, {
 		"id": 7,
-		"name": "Gusev Ilyia Viktorovich",
+		"name": "Trahanov Sergey Pavlovich",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "2",
+		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1242,9 +1251,9 @@
 		"name": "Barkun Inna Vladimirovna",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "2",
+		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1413,7 +1422,7 @@
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1577,12 +1586,12 @@
 		}]
 	}, {
 		"id": 10,
-		"name": "Lukoshko Maksim Alexandrovich",
+		"name": "Senkov Artem Igorievich",
 		"email": "user@bsu.by",
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1746,12 +1755,12 @@
 		}]
 	}, {
 		"id": 11,
-		"name": "Gorbacheva Inna Vladimirovna",
+		"name": "Yancevich Julia Andreevna",
 		"email": "user@bsu.by",
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -1920,7 +1929,7 @@
 		"password": "1",
 		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",
@@ -2084,12 +2093,12 @@
 		}]
 	}, {
 		"id": 13,
-		"name": "Polyakov Ivan Igorevich",
+		"name": "Rudaya Maria Vladimirovna",
 		"email": "user@bsu.by",
 		"password": "1",
-		"group": "3",
+		"group": "1",
 		"subjects": [{
-			"title": "Phisics",
+			"title": "Physics",
 			"tasks": [{
 				"id": 110,
 				"type": "report",

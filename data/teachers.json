@@ -4,14 +4,14 @@
 		"name": "Saratova Elena Alexandrovna",
 		"email": "mail@bsu.by",
 		"password": "1",
-		"subject": "Phisics",
+		"subject": "Physics",
 		"groups": [1, 2]
 	}, {
 		"id": 51,
 		"name": "Kozlova Elena Ivanovna",
 		"email": "admin@bsu.by",
 		"password": "1",
-		"subject": "Maths",
-		"groups": [1, 2, 3]
+		"subject": "Physics",
+		"groups": [1, 2, 3, 5, 8, 10]
 	}]
 }
